@@ -1,0 +1,13 @@
+name: Great Learning Action
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  run_flask:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v2
+      - run: pip install -r requirements.txt
