@@ -15,3 +15,10 @@ jobs:
       - run: pip install --upgrade pip
       - run: sudo apt install python3.11-distutils
       - run: pip install -r requirements.txt
+      - name: Build and Push Docker Image
+        uses: mr-smithers-excellent/docker-build-push@v4
+        with:
+          image: amzn02/glproject2
+          registry: docker.io
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
