@@ -10,6 +10,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v2
+        with:
+          python-version: "3.11"
       - run: pip install --upgrade pip
       - run: sudo apt install python3.11-distutils
       - run: pip install -r requirements.txt
