@@ -10,5 +10,5 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v2
-      - run: sudo apt-get install python3-distutils
+      - run: sudo apt install python3.11-distutils
       - run: pip install -r requirements.txt
