@@ -19,6 +19,6 @@ jobs:
         uses: mr-smithers-excellent/docker-build-push@v4
         with:
           image: amzn02/glproject2
-          registry: docker.i
+          registry: docker.io
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
